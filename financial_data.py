@@ -1,19 +1,25 @@
-''' 
-Using yfinance to get stock data
-https://pypi.org/project/yfinance/
-'''
 import yfinance as yf
+import alpaca_trade_api as alpaca
 
-# get stock data on Apple Inc.
-apple_stock = yf.Ticker("AAPL")
-# get all historical data
-apple_stock_data = apple_stock.history(period="max")
-# get historical data for the last 5 days
-apple_stock_data_last_5_days = apple_stock.history(period="5d")
-print(apple_stock_data_last_5_days["Close"])
+def get_data(timestep):
+    # use API
+
+    apple = alpaca.Ticker("AAPL") # get stock data on Apple Inc.
+    # get open, high, low, close
+    # Volume
+    # Moving Average
+    # RSI
+    # P/E Ratio
+    # Average True Range
+    # D/E Ratio
+    # Revenue Growth rate
+    
+    # return an array of this data
 
 '''
 Using Alpacas API to get stock data
 https://docs.alpaca.markets/docs/about-market-data-api/
-'''
 
+Using yfinance to get stock data
+https://pypi.org/project/yfinance/
+'''

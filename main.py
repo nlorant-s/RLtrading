@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import torch as th
 from stable_baselines3 import PPO
+from financial_data import get_data
 # Additional imports for data fetching
 
 class BitcoinTradingEnv(gym.Env):
@@ -55,7 +56,7 @@ class BitcoinTradingEnv(gym.Env):
         # Get current frame of market data
         frame = self.data.iloc[self.current_step]
         
-        # Features based on current price data
+        # This will be updated to call get_data(timestep)
         features = [
             frame.close,
             frame.volume,
